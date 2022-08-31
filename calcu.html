@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML & CSS Calculator</title>
+  <style type="text/css" media="all">
+    body
+    {
+      user-select: none;
+    }
+    input , table
+    {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input
+    {
+      padding:60px 10px;
+      margin-bottom: 20px;
+    }
+    td
+    {
+      background: #ffffff;
+      width: 15%;
+      text-align: center;
+      height: 60px;
+      border-radius: 25px;
+    }
+    td:active
+    {
+      background: #909090;
+    }
+    div
+    {
+      background: #101010;
+      padding: 10px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px 0;
+    }
+    #result{
+        font-size: 2.5rem;
+        color: black;
+        background: white;
+        border-radius: 5px;
+    }
+    div h1{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+        font-family: arial;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+      <h1>CASIO</h1>
+    <input id="result" disabled>
+    <table>
+      <tr>
+        <td onclick="result.value+=7">7</td>
+        <td onclick="result.value+=8">8</td>
+        <td onclick="result.value+=9">9</td>
+        <td onclick="result.value+='+'">+</td>
+        <td onclick="result.value+='/'">%</td>
+      </tr>
+      <tr>
+        <td onclick="result.value+=4">4</td>
+        <td onclick="result.value+=5">5</td>
+        <td onclick="result.value+=6">6</td>
+        <td onclick="result.value+='-'">-</td>
+        <td onclick="result.value+='*'">^</td>
+      </tr>
+      <tr>
+        <td onclick="result.value+=1">1</td>
+        <td onclick="result.value+=2">2</td>
+        <td onclick="result.value+=3">3</td>
+        <td onclick="result.value+='*'">×</td>
+        <td onclick="result.value+='>'">></td>
+        
+      </tr>
+      <tr>
+        
+        <td onclick="result.value+=0">0</td>
+        <td onclick="result.value=''">AC</td>
+        <td onclick="result.value=eval(result.value)">=</td>
+        <td onclick="result.value+='/'">÷</td>   
+        <td onclick="result.value+='<'"><</td>   
+      </tr>
+    </table>
+  </div>  
+</body>
+</html>
